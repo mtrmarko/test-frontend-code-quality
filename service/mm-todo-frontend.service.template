@@ -1,0 +1,18 @@
+[Unit]
+Description=Sample React and FastAPI TODO App FRONTEND service
+After=mm-todo-api.service
+
+[Service]
+ExecStart=pm2 serve build 3000 --name mm-todo --no-daemon
+ExecStop=pm2 stop mm-todo
+Type=simple
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=mm-todo-frontend
+User={{User}}
+WorkingDirectory={{WorkingDir}}
+#WorkingDirectory=/home/marko/repos/react-fastapi-spa-example/frontend
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
