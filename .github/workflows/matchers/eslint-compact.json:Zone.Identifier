@@ -1,0 +1,4 @@
+[ZoneTransfer]
+ZoneId=3
+ReferrerUrl=https://github.com/
+HostUrl=https://raw.githubusercontent.com/actions/setup-node/16352bb09bc672a073e326c2cc1d3d7d2a3e577e/.github/eslint-compact.json
