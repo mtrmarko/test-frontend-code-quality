@@ -66,8 +66,7 @@ jobs:
         # all checks complete and sisplay all issues in one run
         if: ${{ env.CHANGED_FILES && (success() || failure()) }}
         run: |
-          #echo "::add-matcher::.github/workflows/matchers/eslint-compact.json"
-          echo "::add-matcher::.github/workflows/matchers/eslint-stylish.json"
+          echo "::add-matcher::.github/workflows/matchers/eslint-compact.json"
           yarn lint ${{ env.CHANGED_FILES }}
-          echo "::remove-matcher owner=eslint-stylish::"
+          echo "::remove-matcher owner=eslint-compact::"
 
