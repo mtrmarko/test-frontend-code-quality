@@ -19,13 +19,13 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "eslint --ext .js --ext .jsx --format compact",
-    "check-format": "prettier --check"
+    "lint": "eslint --ext .js --ext .jsx --format compact"
   },
   "eslintConfig": {
     "extends": [
       "react-app",
-      "react-app/jest"
+      "react-app/jest",
+      "prettier"
     ]
   },
   "browserslist": {
@@ -42,6 +42,7 @@
   },
   "devDependencies": {
     "eslint": "^8.26.0",
+    "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.31.10",
     "prettier": "^2.7.1"
   }
